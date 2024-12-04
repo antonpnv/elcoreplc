@@ -596,6 +596,10 @@ body {
   margin-right: 120px;
 }
 
+.footer-education__title {
+  width: 232px;
+}
+
 .footer-education__list {
   width: 216px;
   gap: 18px;

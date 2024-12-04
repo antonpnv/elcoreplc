@@ -344,6 +344,10 @@
     font-size: 26px;
   }
 
+  .footer-education__title {
+    width: 100%;
+  }
+
   .footer-platform__list,
   .footer-education__list,
   .footer-contacts__list {
