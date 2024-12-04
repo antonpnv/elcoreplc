@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.png"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/media-styles.css">
+  <title>Новости и статьи</title>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+
+    <nav class="navigation-top">
+      <ul class="socials">
+        <li>
+          <a href="https://telegram.org" target="_blank">
+            <img src="assets/svg/Тлг.svg" alt="Телеграм">
+          </a>
+        </li>
+        <li>
+          <a href="https://dzen.ru" target="_blank">
+            <img src="assets/svg/Дзен.svg" alt="Дзен">
+          </a>
+        </li>
+        <li>
+          <a href="https://www.youtube.com" target="_blank">
+            <img src="assets/svg/Ютуб.svg" alt="Ютуб">
+          </a>
+        </li>
+        <li>
+          <a href="https://vk.com" target="_blank">
+            <img src="assets/svg/Вк.svg" alt="Вк">
+          </a>
+        </li>
+      </ul>
+      <ul class="navigation-top__list">
+        <li class="navigation-top__item">
+          <a href="#">Форум</a>
+        </li>
+        <li class="navigation-top__item">
+          <a href="#">Поиск</a>
+        </li>
+        <li class="navigation-top__item">
+          <a href="#">Контакты</a>
+        </li>
+        <div class="navigation-top__btns">
+          <button class="navigation-top__icon"><img src="assets/svg/star.svg" alt="star"></button>
+          <button class="navigation-top__icon"><img src="assets/svg/shopping-cart.svg" alt="basket"></button>
+          <button class="navigation-top__button">Личный кабинет</button>
+        </div>
+      </ul>
+    </nav>
+
+    <nav class="navigation-menu">
+      <a href="#0" class="logo"><img src="./assets/svg/Лого.svg" alt="logo"></a>
+
+      <ul class="navigation-menu__list">
+        <li class="navigation-menu__item">
+          <a href="#">ElcoreStore</a>
+        </li>
+        <li class="navigation-menu__item">
+          <a href="#">ElcoreCloud</a>
+        </li>
+        <li class="navigation-menu__item">
+          <a href="#">ElcoreIDE</a>
+        </li>
+        <li class="navigation-menu__item">
+          <a class="dropdown" href="#">Обучение и ресурсы</a>
+          <button class="dropdown-btn" aria-expanded="false" aria-controls="dropdown-content">
+            <img src="./assets/svg/dropdown_btn.svg" alt="Узнать больше">
+          </button>
+          <ul class="dropdown-content" id="dropdown-content">
+            <li class="dropdown-education__item">
+              <a href="#">Что такое ElcorePLC</a>
+            </li>
+            <li class="dropdown-education__item">
+              <a href="#">Документация</a>
+            </li>
+            <li class="dropdown-education__item">
+              <a href="#">Обучающие материалы</a>
+            </li>
+            <li class="dropdown-education__item">
+              <a href="#">Примеры использования</a>
+            </li>
+            <li class="dropdown-education__item">
+              <a href="#">База знаний</a>
+            </li>
+          </ul>
+        </li>
+        <li class="navigation-menu__item">
+          <a href="#">Новости и статьи</a>
+        </li>
+      </ul>
+
+      <div class="menu-burger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <!-- Mobile menu -->
+      <div class="menu-overlay">
+      <ul class="menu-overlay__list">
+        <li class="menu-overlay__item">
+          <a href="#">ElcoreStore</a>
+        </li>
+        <li class="menu-overlay__item">
+          <a href="#">ElcoreCloud</a>
+        </li>
+        <li class="menu-overlay__item">
+          <a href="#">ElcoreIDE</a>
+        </li>
+        <li class="menu-overlay__item">
+          <a class="dropdown" href="#">Обучение и ресурсы</a>
+          <button class="dropdown-btn" aria-expanded="false" aria-controls="dropdown-content">
+                  <img src="./assets/svg/dropdown_btn.svg" alt="Узнать больше">
+                </button>
+          <ul class="dropdown-content" id="dropdown-content">
+            <li class="dropdown-education__item">
+              <a href="#">Что такое ElcorePLC</a>
+            </li>
+            <li class="dropdown-education__item">
+              <a href="#">Документация</a>
+            </li>
+            <li class="dropdown-education__item">
+              <a href="#">Обучающие материалы</a>
+            </li>
+            <li class="dropdown-education__item">
+              <a href="#">Примеры использования</a>
+            </li>
+            <li class="dropdown-education__item">
+              <a href="#">База знаний</a>
+            </li>
+          </ul>
+        </li>
+        <li class="menu-overlay__item">
+          <a href="#">Новости и статьи</a>
+        </li>
+      </ul>
+      </div>
+    </nav>
+
+    <nav class="navigation-bottom">
+      <ul class="navigation-bottom__list">
+        <li class="navigation-bottom__item active">
+          <a href="#">Главная</a>
+        </li>
+        <p style="margin: 0 10px;"> / </p>
+        <li class="navigation-bottom__item">
+          <a href="#">Новости и статьи</a>
+        </li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <!-- Main content -->
+  <main class="main-content">
+    <h1 class="main-content__title">Новости и статьи</h1>
+
+    <div class="sort-btns">
+      <input type="radio" id="all" name="sort" class="btn-sort__input" checked>
+      <label for="all" class="sort-btn__all">Все новости и статьи</label>
+      <input type="radio" id="news" name="sort" class="btn-sort__input">
+      <label for="news" class="sort-btn__news">Новости</label>
+      <input type="radio" id="articles" name="sort" class="btn-sort__input">
+      <label for="articles" class="sort-btn__articles">Статьи</label>
+    </div>
+
+    <section class="cards">
+      <div class="card" id="news">
+        <img class="card-image" src="./assets/images/Изображение.png" alt="card">
+        <div class="date-category">
+          <time class="date" datetime="12-07-2024">12 июля 2024</time>
+          <p style="margin: 0 10px;"> / </p>
+          <p class="card-category">Новость</p>
+        </div>
+        <div class="card-content">
+          <h4 class="card-title">Новые технологии в сфере автоматизации</h4>
+          <p class="card-text">
+            Какие инновации помогут улучшить производственные процессы и повысить эффективность работы предприятий
+          </p>
+        </div>
+      </div>
+      <div class="card" id="articles">
+        <img class="card-image" src="./assets/images/Изображение.png" alt="card">
+        <div class="date-category">
+          <p class="card-category">Статья</p>
+        </div>
+        <div class="card-content">
+          <h4 class="card-title">Влияние цифровизации</h4>
+          <p class="card-text">
+            Вызовы и возможности появляются для компаний в результате цифровой трансформации производства
+          </p>
+        </div>
+      </div>
+      <div class="card" id="news">
+        <img class="card-image" src="./assets/images/Изображение.png" alt="card">
+        <div class="date-category">
+          <time class="date" datetime="24-04-2024">24 апреля 2024</time>
+          <p style="margin: 0 10px;"> / </p>
+          <p class="card-category">Новость</p>
+        </div>
+        <div class="card-content">
+          <h4 class="card-title">Устойчивое развитие и ответственность</h4>
+          <p class="card-text">
+            Какие методы и технологии помогают снизить негативное влияние производства
+          </p>
+        </div>
+      </div>
+      <div class="card" id="news">
+        <img class="card-image" src="./assets/images/Изображение.png" alt="card">
+        <div class="date-category">
+          <time class="date" datetime="12-07-2024">12 июля 2024</time>
+          <p style="margin: 0 10px;"> / </p>
+          <p class="card-category">Новость</p>
+        </div>
+        <div class="card-content">
+          <h4 class="card-title">Новые технологии в сфере автоматизации</h4>
+          <p class="card-text">
+            Какие инновации помогут улучшить производственные процессы и повысить эффективность работы предприятий
+          </p>
+        </div>
+      </div>
+      <div class="card" id="news">
+        <img class="card-image" src="./assets/images/Изображение.png" alt="card">
+        <div class="date-category">
+          <time class="date" datetime="24-04-2024">24 апреля 2024</time>
+          <p style="margin: 0 10px;"> / </p>
+          <p class="card-category">Новость</p>
+        </div>
+        <div class="card-content">
+          <h4 class="card-title">Устойчивое развитие и ответственность</h4>
+          <p class="card-text">
+            Какие методы и технологии помогают снизить негативное влияние производства
+          </p>
+        </div>
+      </div>
+      <div class="card" id="articles">
+        <img class="card-image" src="./assets/images/Изображение.png" alt="card">
+        <div class="date-category">
+          <p class="card-category">Статья</p>
+        </div>
+        <div class="card-content">
+          <h4 class="card-title">Влияние цифровизации</h4>
+          <p class="card-text">
+            Вызовы и возможности появляются для компаний в результате цифровой трансформации производства
+          </p>
+        </div>
+      </div>
+      <div class="card" id="articles">
+        <img class="card-image" src="./assets/images/Изображение.png" alt="card">
+        <div class="date-category">
+          <p class="card-category">Статья</p>
+        </div>
+        <div class="card-content">
+          <h4 class="card-title">Влияние цифровизации</h4>
+          <p class="card-text">
+            Вызовы и возможности появляются для компаний в результате цифровой трансформации производства
+          </p>
+        </div>
+      </div>
+      <div class="card" id="news">
+        <img class="card-image" src="./assets/images/Изображение.png" alt="card">
+        <div class="date-category">
+          <time class="date" datetime="12-07-2024">12 июля 2024</time>
+          <p style="margin: 0 10px;"> / </p>
+          <p class="card-category">Новость</p>
+        </div>
+        <div class="card-content">
+          <h4 class="card-title">Новые технологии в сфере автоматизации</h4>
+          <p class="card-text">
+            Какие инновации помогут улучшить производственные процессы и повысить эффективность работы предприятий
+          </p>
+        </div>
+      </div>
+      <div class="card" id="news">
+        <img class="card-image" src="./assets/images/Изображение.png" alt="card">
+        <div class="date-category">
+          <time class="date" datetime="24-04-2024">24 апреля 2024</time>
+          <p style="margin: 0 10px;"> / </p>
+          <p class="card-category">Новость</p>
+        </div>
+        <div class="card-content">
+          <h4 class="card-title">Устойчивое развитие и ответственность</h4>
+          <p class="card-text">
+            Какие методы и технологии помогают снизить негативное влияние производства
+          </p>
+        </div>
+      </div>
+      <!-- page 2 -->
+      <div class="card" id="news">
+        <img class="card-image" src="./assets/images/Изображение.png" alt="card">
+        <div class="date-category">
+          <time class="date" datetime="12-07-2024">12 июля 2024</time>
+          <p style="margin: 0 10px;"> / </p>
+          <p class="card-category">Новость</p>
+        </div>
+        <div class="card-content">
+          <h4 class="card-title">Новые технологии в сфере автоматизации</h4>
+          <p class="card-text">
+            Какие инновации помогут улучшить производственные процессы и повысить эффективность работы предприятий
+          </p>
+        </div>
+      </div>
+      <div class="card" id="articles">
+        <img class="card-image" src="./assets/images/Изображение.png" alt="card">
+        <div class="date-category">
+          <p class="card-category">Статья</p>
+        </div>
+        <div class="card-content">
+          <h4 class="card-title">Влияние цифровизации</h4>
+          <p class="card-text">
+            Вызовы и возможности появляются для компаний в результате цифровой трансформации производства
+          </p>
+        </div>
+      </div>
+      <div class="card" id="news">
+        <img class="card-image" src="./assets/images/Изображение.png" alt="card">
+        <div class="date-category">
+          <time class="date" datetime="24-04-2024">24 апреля 2024</time>
+          <p style="margin: 0 10px;"> / </p>
+          <p class="card-category">Новость</p>
+        </div>
+        <div class="card-content">
+          <h4 class="card-title">Устойчивое развитие и ответственность</h4>
+          <p class="card-text">
+            Какие методы и технологии помогают снизить негативное влияние производства
+          </p>
+        </div>
+      </div>
+      <div class="card" id="articles">
+        <img class="card-image" src="./assets/images/Изображение.png" alt="card">
+        <div class="date-category">
+          <p class="card-category">Статья</p>
+        </div>
+        <div class="card-content">
+          <h4 class="card-title">Влияние цифровизации</h4>
+          <p class="card-text">
+            Вызовы и возможности появляются для компаний в результате цифровой трансформации производства
+          </p>
+        </div>
+      </div>
+      <div class="card" id="news">
+        <img class="card-image" src="./assets/images/Изображение.png" alt="card">
+        <div class="date-category">
+          <time class="date" datetime="12-07-2024">12 июля 2024</time>
+          <p style="margin: 0 10px;"> / </p>
+          <p class="card-category">Новость</p>
+        </div>
+        <div class="card-content">
+          <h4 class="card-title">Новые технологии в сфере автоматизации</h4>
+          <p class="card-text">
+            Какие инновации помогут улучшить производственные процессы и повысить эффективность работы предприятий
+          </p>
+        </div>
+      </div>
+      <div class="card" id="articles">
+        <img class="card-image" src="./assets/images/Изображение.png" alt="card">
+        <div class="date-category">
+          <p class="card-category">Статья</p>
+        </div>
+        <div class="card-content">
+          <h4 class="card-title">Влияние цифровизации</h4>
+          <p class="card-text">
+            Вызовы и возможности появляются для компаний в результате цифровой трансформации производства
+          </p>
+        </div>
+      </div>
+      <div class="card" id="news">
+        <img class="card-image" src="./assets/images/Изображение.png" alt="card">
+        <div class="date-category">
+          <time class="date" datetime="24-04-2024">24 апреля 2024</time>
+          <p style="margin: 0 10px;"> / </p>
+          <p class="card-category">Новость</p>
+        </div>
+        <div class="card-content">
+          <h4 class="card-title">Устойчивое развитие и ответственность</h4>
+          <p class="card-text">
+            Какие методы и технологии помогают снизить негативное влияние производства
+          </p>
+        </div>
+      </div>
+      <div class="card" id="news">
+        <img class="card-image" src="./assets/images/Изображение.png" alt="card">
+        <div class="date-category">
+          <time class="date" datetime="12-07-2024">12 июля 2024</time>
+          <p style="margin: 0 10px;"> / </p>
+          <p class="card-category">Новость</p>
+        </div>
+        <div class="card-content">
+          <h4 class="card-title">Новые технологии в сфере автоматизации</h4>
+          <p class="card-text">
+            Какие инновации помогут улучшить производственные процессы и повысить эффективность работы предприятий
+          </p>
+        </div>
+      </div>
+      <div class="card" id="articles">
+        <img class="card-image" src="./assets/images/Изображение.png" alt="card">
+        <div class="date-category">
+          <p class="card-category">Статья</p>
+        </div>
+        <div class="card-content">
+          <h4 class="card-title">Влияние цифровизации</h4>
+          <p class="card-text">
+            Вызовы и возможности появляются для компаний в результате цифровой трансформации производства
+          </p>
+        </div>
+      </div>
+      <!-- page 3 -->
+      <div class="card" id="news">
+        <img class="card-image" src="./assets/images/Изображение.png" alt="card">
+        <div class="date-category">
+          <time class="date" datetime="12-07-2024">12 июля 2024</time>
+          <p style="margin: 0 10px;"> / </p>
+          <p class="card-category">Новость</p>
+        </div>
+        <div class="card-content">
+          <h4 class="card-title">Новые технологии в сфере автоматизации</h4>
+          <p class="card-text">
+            Какие инновации помогут улучшить производственные процессы и повысить эффективность работы предприятий
+          </p>
+        </div>
+      </div>
+      <div class="card" id="articles">
+        <img class="card-image" src="./assets/images/Изображение.png" alt="card">
+        <div class="date-category">
+          <p class="card-category">Статья</p>
+        </div>
+        <div class="card-content">
+          <h4 class="card-title">Влияние цифровизации</h4>
+          <p class="card-text">
+            Вызовы и возможности появляются для компаний в результате цифровой трансформации производства
+          </p>
+        </div>
+      </div>
+      <div class="card" id="news">
+        <img class="card-image" src="./assets/images/Изображение.png" alt="card">
+        <div class="date-category">
+          <time class="date" datetime="24-04-2024">24 апреля 2024</time>
+          <p style="margin: 0 10px;"> / </p>
+          <p class="card-category">Новость</p>
+        </div>
+        <div class="card-content">
+          <h4 class="card-title">Устойчивое развитие и ответственность</h4>
+          <p class="card-text">
+            Какие методы и технологии помогают снизить негативное влияние производства
+          </p>
+        </div>
+      </div>
+      <div class="card" id="news">
+        <img class="card-image" src="./assets/images/Изображение.png" alt="card">
+        <div class="date-category">
+          <time class="date" datetime="12-07-2024">12 июля 2024</time>
+          <p style="margin: 0 10px;"> / </p>
+          <p class="card-category">Новость</p>
+        </div>
+        <div class="card-content">
+          <h4 class="card-title">Новые технологии в сфере автоматизации</h4>
+          <p class="card-text">
+            Какие инновации помогут улучшить производственные процессы и повысить эффективность работы предприятий
+          </p>
+        </div>
+      </div>
+      <div class="card" id="news">
+        <img class="card-image" src="./assets/images/Изображение.png" alt="card">
+        <div class="date-category">
+          <time class="date" datetime="24-04-2024">24 апреля 2024</time>
+          <p style="margin: 0 10px;"> / </p>
+          <p class="card-category">Новость</p>
+        </div>
+        <div class="card-content">
+          <h4 class="card-title">Устойчивое развитие и ответственность</h4>
+          <p class="card-text">
+            Какие методы и технологии помогают снизить негативное влияние производства
+          </p>
+        </div>
+      </div>
+      <div class="card" id="articles">
+        <img class="card-image" src="./assets/images/Изображение.png" alt="card">
+        <div class="date-category">
+          <p class="card-category">Статья</p>
+        </div>
+        <div class="card-content">
+          <h4 class="card-title">Влияние цифровизации</h4>
+          <p class="card-text">
+            Вызовы и возможности появляются для компаний в результате цифровой трансформации производства
+          </p>
+        </div>
+      </div>
+      <div class="card" id="articles">
+        <img class="card-image" src="./assets/images/Изображение.png" alt="card">
+        <div class="date-category">
+          <p class="card-category">Статья</p>
+        </div>
+        <div class="card-content">
+          <h4 class="card-title">Влияние цифровизации</h4>
+          <p class="card-text">
+            Вызовы и возможности появляются для компаний в результате цифровой трансформации производства
+          </p>
+        </div>
+      </div>
+      <div class="card" id="news">
+        <img class="card-image" src="./assets/images/Изображение.png" alt="card">
+        <div class="date-category">
+          <time class="date" datetime="12-07-2024">12 июля 2024</time>
+          <p style="margin: 0 10px;"> / </p>
+          <p class="card-category">Новость</p>
+        </div>
+        <div class="card-content">
+          <h4 class="card-title">Новые технологии в сфере автоматизации</h4>
+          <p class="card-text">
+            Какие инновации помогут улучшить производственные процессы и повысить эффективность работы предприятий
+          </p>
+        </div>
+      </div>
+      <div class="card" id="news">
+        <img class="card-image" src="./assets/images/Изображение.png" alt="card">
+        <div class="date-category">
+          <time class="date" datetime="24-04-2024">24 апреля 2024</time>
+          <p style="margin: 0 10px;"> / </p>
+          <p class="card-category">Новость</p>
+        </div>
+        <div class="card-content">
+          <h4 class="card-title">Устойчивое развитие и ответственность</h4>
+          <p class="card-text">
+            Какие методы и технологии помогают снизить негативное влияние производства
+          </p>
+        </div>
+      </div>
+      <!-- page 4 -->
+      <div class="card" id="news">
+        <img class="card-image" src="./assets/images/Изображение.png" alt="card">
+        <div class="date-category">
+          <time class="date" datetime="12-07-2024">12 июля 2024</time>
+          <p style="margin: 0 10px;"> / </p>
+          <p class="card-category">Новость</p>
+        </div>
+        <div class="card-content">
+          <h4 class="card-title">Новые технологии в сфере автоматизации</h4>
+          <p class="card-text">
+            Какие инновации помогут улучшить производственные процессы и повысить эффективность работы предприятий
+          </p>
+        </div>
+      </div>
+      <div class="card" id="articles">
+        <img class="card-image" src="./assets/images/Изображение.png" alt="card">
+        <div class="date-category">
+          <p class="card-category">Статья</p>
+        </div>
+        <div class="card-content">
+          <h4 class="card-title">Влияние цифровизации</h4>
+          <p class="card-text">
+            Вызовы и возможности появляются для компаний в результате цифровой трансформации производства
+          </p>
+        </div>
+      </div>
+      <div class="card" id="news">
+        <img class="card-image" src="./assets/images/Изображение.png" alt="card">
+        <div class="date-category">
+          <time class="date" datetime="24-04-2024">24 апреля 2024</time>
+          <p style="margin: 0 10px;"> / </p>
+          <p class="card-category">Новость</p>
+        </div>
+        <div class="card-content">
+          <h4 class="card-title">Устойчивое развитие и ответственность</h4>
+          <p class="card-text">
+            Какие методы и технологии помогают снизить негативное влияние производства
+          </p>
+        </div>
+      </div>
+      <div class="card" id="articles">
+        <img class="card-image" src="./assets/images/Изображение.png" alt="card">
+        <div class="date-category">
+          <p class="card-category">Статья</p>
+        </div>
+        <div class="card-content">
+          <h4 class="card-title">Влияние цифровизации</h4>
+          <p class="card-text">
+            Вызовы и возможности появляются для компаний в результате цифровой трансформации производства
+          </p>
+        </div>
+      </div>
+      <div class="card" id="news">
+        <img class="card-image" src="./assets/images/Изображение.png" alt="card">
+        <div class="date-category">
+          <time class="date" datetime="12-07-2024">12 июля 2024</time>
+          <p style="margin: 0 10px;"> / </p>
+          <p class="card-category">Новость</p>
+        </div>
+        <div class="card-content">
+          <h4 class="card-title">Новые технологии в сфере автоматизации</h4>
+          <p class="card-text">
+            Какие инновации помогут улучшить производственные процессы и повысить эффективность работы предприятий
+          </p>
+        </div>
+      </div>
+      <div class="card" id="articles">
+        <img class="card-image" src="./assets/images/Изображение.png" alt="card">
+        <div class="date-category">
+          <p class="card-category">Статья</p>
+        </div>
+        <div class="card-content">
+          <h4 class="card-title">Влияние цифровизации</h4>
+          <p class="card-text">
+            Вызовы и возможности появляются для компаний в результате цифровой трансформации производства
+          </p>
+        </div>
+      </div>
+      <div class="card" id="news">
+        <img class="card-image" src="./assets/images/Изображение.png" alt="card">
+        <div class="date-category">
+          <time class="date" datetime="24-04-2024">24 апреля 2024</time>
+          <p style="margin: 0 10px;"> / </p>
+          <p class="card-category">Новость</p>
+        </div>
+        <div class="card-content">
+          <h4 class="card-title">Устойчивое развитие и ответственность</h4>
+          <p class="card-text">
+            Какие методы и технологии помогают снизить негативное влияние производства
+          </p>
+        </div>
+      </div>
+      <div class="card" id="news">
+        <img class="card-image" src="./assets/images/Изображение.png" alt="card">
+        <div class="date-category">
+          <time class="date" datetime="12-07-2024">12 июля 2024</time>
+          <p style="margin: 0 10px;"> / </p>
+          <p class="card-category">Новость</p>
+        </div>
+        <div class="card-content">
+          <h4 class="card-title">Новые технологии в сфере автоматизации</h4>
+          <p class="card-text">
+            Какие инновации помогут улучшить производственные процессы и повысить эффективность работы предприятий
+          </p>
+        </div>
+      </div>
+      <div class="card" id="articles">
+        <img class="card-image" src="./assets/images/Изображение.png" alt="card">
+        <div class="date-category">
+          <p class="card-category">Статья</p>
+        </div>
+        <div class="card-content">
+          <h4 class="card-title">Влияние цифровизации</h4>
+          <p class="card-text">
+            Вызовы и возможности появляются для компаний в результате цифровой трансформации производства
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-info">
+      <a href="#0" class="logo footer-logo"><img src="./assets/svg/Лого.svg" alt="logo"></a>
+      <h3 class="footer-info__text">
+        Платформа для автоматизации ваших процессов
+      </h3>
+      <button class="footer-info__download">
+        <img src="./assets/images/Скачать.png" alt="Скачать на компьютер">
+      </button>
+      <p class="footer-info__copyright">© ООО «НПО «Фарватер» 2024</p>
+    </div>
+    <div class="footer-platform">
+      <h3 class="footer-title">Платформа</h3>
+      <ul class="footer-platform__list">
+        <li class="footer-platform__item">
+          <a href="#">ElcoreStore</a>
+        </li>
+        <li class="footer-platform__item">
+          <a href="#">ElcoreCloud</a>
+        </li>
+        <li class="footer-platform__item">
+          <a href="#">ElcoreIDE</a>
+        </li>
+      </ul>
+    </div>
+    <div class="footer-education">
+      <h3 class="footer-title">Обучение и ресурсы</h3>
+      <ul class="footer-education__list">
+        <li class="footer-education__item">
+          <a href="#">Что такое ElcorePLC</a>
+        </li>
+        <li class="footer-education__item">
+          <a href="#">Документация</a>
+        </li>
+        <li class="footer-education__item">
+          <a href="#">Обучающие материалы</a>
+        </li>
+        <li class="footer-education__item">
+          <a href="#">Примеры использования</a>
+        </li>
+        <li class="footer-education__item">
+          <a href="#">База знаний</a>
+        </li>
+      </ul>
+    </div>
+    <div class="footer-contacts">
+      <button class="footer-account__btn">Личный кабинет</button>
+      <p class="footer-contacts__item">Контакты</p>
+      <p class="footer-contacts__item">Новости и статьи</p>
+      <p class="footer-contacts__item">Сообщество (Форум)</p>
+      <p class="footer-contacts__item">Тех поддержка</p>
+    </div>
+  </footer>
+  <footer class="footer-bottom">
+    <ul class="socials">
+      <li>
+        <a href="https://telegram.org" target="_blank">
+          <img src="assets/svg/Тлг.svg" alt="Телеграм">
+        </a>
+      </li>
+      <li>
+        <a href="https://dzen.ru" target="_blank">
+          <img src="assets/svg/Дзен.svg" alt="Дзен">
+        </a>
+      </li>
+      <li>
+        <a href="https://www.youtube.com" target="_blank">
+          <img src="assets/svg/Ютуб.svg" alt="Ютуб">
+        </a>
+      </li>
+      <li>
+        <a href="https://vk.com" target="_blank">
+          <img src="assets/svg/Вк.svg" alt="Вк">
+        </a>
+      </li>
+    </ul>
+
+    <div class="footer-bottom__info">
+      <a href="#" class="footer-bottom__text">Политика конфиденциальности</a>
+      <a href="#" class="footer-bottom__text">Карта сайта</a>
+    </div>
+  </footer>
+
+  <script src="/script.js"></script>
+</body>
+</html>
